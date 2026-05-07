@@ -25,8 +25,6 @@ From the project root:
 mvn clean javafx:run
 ```
 
-If `mvn` is not on your PATH, use the full Maven path instead.
-
 ## Main Features
 
 - Manage students, lecturers, courses, and subjects
