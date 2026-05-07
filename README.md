@@ -12,6 +12,12 @@ Desktop application for managing students, lecturers, courses, subjects, class s
 
 Update `src/main/resources/hibernate.cfg.xml` with your MySQL JDBC URL, username, and password.
 
+To create the database and load the demo data, run:
+
+```powershell
+mysql -u root -p < db/schema.sql
+```
+
 The app seeds demo users at startup:
 
 - Admin: `admin` / `admin123`
