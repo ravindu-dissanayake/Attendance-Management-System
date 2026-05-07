@@ -2,6 +2,14 @@
 
 Desktop application for managing students, lecturers, courses, subjects, class sessions, attendance, and reports.
 
+## Technologies Used
+
+- Java 21
+- JavaFX
+- Hibernate ORM
+- MySQL
+- Maven
+
 ## Requirements
 
 - Java 21
