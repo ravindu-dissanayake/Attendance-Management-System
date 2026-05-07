@@ -15,7 +15,7 @@ public final class HibernateUtil {
         try {
             URL configurationUrl = HibernateUtil.class.getClassLoader().getResource("hibernate.cfg.xml");
             if (configurationUrl == null) {
-                    throw new IllegalStateException("Missing hibernate.cfg.xml on the runtime classpath");
+                throw new IllegalStateException("Missing hibernate.cfg.xml on the runtime classpath");
             }
             return new Configuration().configure(configurationUrl).buildSessionFactory();
         } catch (Exception ex) {
