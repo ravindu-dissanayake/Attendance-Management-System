@@ -1,0 +1,27 @@
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-base: #f8fafc;
+    -fx-background-color: linear-gradient(to bottom, #f8fafc, #e2e8f0);
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #0f172a;
+}
+
+.tab-pane .tab {
+    -fx-background-color: #1e293b;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: #0ea5e9;
+}
+
+.button {
+    -fx-background-radius: 8;
+    -fx-padding: 8 14;
+}
+
+.label.title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
