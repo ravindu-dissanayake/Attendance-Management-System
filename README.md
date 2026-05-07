@@ -1,89 +1,36 @@
 ﻿# Student Attendance Management System (SAMS)
 
-A Java desktop application for managing courses, students, lecturers, class schedules, attendance marking, and attendance reports — built as a coursework project.
+Desktop application for managing students, lecturers, courses, subjects, class sessions, attendance, and reports.
 
-## Tech Stack
+## Requirements
 
-- Java 21 (project source)
-- JavaFX (UI)
-- Hibernate ORM (JPA/Hibernate)
-- MySQL (database)
-- Maven (build)
+- Java 21
+- Maven
+- MySQL
 
-## Features
+## Configuration
 
-- Manage Courses, Subjects, Lecturers, and Students
-- Create Class Sessions and mark Attendance
-- Generate attendance reports (per student / per class / by date range)
-- Simple role-based logins (admin / lecturer)
-- Seeded sample data for quick testing
+Update `src/main/resources/hibernate.cfg.xml` with your MySQL JDBC URL, username, and password.
 
-## Prerequisites
+The app seeds demo users at startup:
 
-- JDK 21+ installed and JAVA_HOME set
-- Apache Maven (or use the provided local `C:\maven\bin\mvn`) installed
-- MySQL server running
+- Admin: `admin` / `admin123`
+- Lecturer: `lecturer` / `lec123`
 
-## Database setup
+## Run
 
-1. Create the database and seed sample data by running the SQL script:
-
-```bash
-mysql -u root -p < db/schema.sql
-```
-
-2. If your MySQL user/password or host differ, update `src/main/resources/hibernate.cfg.xml` accordingly.
-
-## Configure application (if needed)
-
-- Edit `src/main/resources/hibernate.cfg.xml` to set the JDBC URL, username and password for your MySQL server.
-
-Default example values in the project (for demo):
-
-- JDBC URL: `jdbc:mysql://localhost:3306/sams_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC`
-- Username: `root`
-- Password: `root`
-
-## Run the application
-
-From the project root run:
+From the project root:
 
 ```powershell
 mvn clean javafx:run
 ```
 
-If `mvn` is not on your PATH, run using an absolute path (example):
+If `mvn` is not on your PATH, use the full Maven path instead.
 
-```powershell
-C:\maven\bin\mvn clean javafx:run
-```
+## Main Features
 
-## Default demo credentials
+- Manage students, lecturers, courses, and subjects
+- Create class sessions and mark attendance
+- View attendance reports
+- Use role-based login for admin and lecturer accounts
 
-- Admin: `admin` / `admin123`
-- Lecturer: `lecturer` / `lec123`
-
-These are created by `AuthService.seedDefaults()` for demo/testing.
-
-## Notes & next steps
-
-- Passwords are stored in plain text for the demo — replace with hashed passwords (bcrypt) before any production use.
-- You can package the app as a runnable JAR or native installer; tell me if you want a packaged build.
-
-## Deliverables
-
-- Database script: `db/schema.sql`
-- Project source in this repository
-
-## Repository
-
-The code is pushed to the project repository and branches (feature branches) are available on the remote.
-
----
-
-If you want, I can also:
-
-- Create a ZIP release or build an executable JAR for submission
-- Add screenshots and a `docs/` folder with step-by-step visuals
-
-Tell me which of those you'd like next.
